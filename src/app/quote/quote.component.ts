@@ -9,10 +9,15 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[]=[
-    new Quote(1, "I hated every minute of training, but I said, 'Don't quit. Suffer now andlive the rest of your life as a champion.'","Muhammed Ali",0, 0),
-    new Quote(1, "When we are no longer able to change a situation - we are challenged to change ourselves."," Viktor E. Frankl",0, 0),
-    new Quote(1, "Progress is impossible without change, and those who cannot change their minds cannot change anything.", "George Bernard Shaw", 0, 0),
+    new Quote(1, "I hated every minute of training, but I said, 'Don't quit. Suffer now andlive the rest of your life as a champion.'","Muhammed Ali",2, 0),
+    new Quote(2, "When we are no longer able to change a situation - we are challenged to change ourselves."," Viktor E. Frankl",0, 0),
+    new Quote(3, "Progress is impossible without change, and those who cannot change their minds cannot change anything.", "George Bernard Shaw", 0, 0),
   ]
+
+  arr: number[]=this.quotes.map(quote=>quote.upvotes)
+  highestVotes=Math.max(...this.arr)
+
+
 
   quoteDelete(canDelete:boolean, index:number){
     if (canDelete) {

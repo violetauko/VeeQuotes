@@ -1,22 +1,15 @@
-<div class="container d-flex justify-content-evenly" >
-  
-    <div *ngFor="let quote of quotes;let i = index" class="shadow  bg-body rounded " id="shadow1">
-      {{quote.quote}}
-      <br>
-      <br>
-      <br>
-      {{quote.author}}
-      <br>
-      <br>
-      <i class='fas fa-thumbs-up' id="tUp">{{quote.upvotes}}</i>
-    <i class='fas fa-thumbs-down' id="tDown">{{quote.downvotes}}</i>
-      <app-quote-details (canDelete)="quoteDelete($event,i)">
-        
-      </app-quote-details>
-    </div>
-      
+<div class="container d-flex justify-content-evenly ">
+  <div
+    *ngFor="let quote of quotes; let i = index"
+    class="shadow bg-body rounded"
+    id="shadow1"
+  >
+      <div>{{ quote.quote }} <br><br><br>{{ quote.author }} <br><br>
+      <i class="fas fa-thumbs-up" id="tUp">{{ quote.upvotes }}</i>
+      <i class="fas fa-thumbs-down" id="tDown">{{ quote.downvotes }}</i>
+      </div>
+    
+    <app-quote-details (canDelete)="quoteDelete($event, i)">
+    </app-quote-details>
+  </div>
 </div>
-
-       
-
-  
