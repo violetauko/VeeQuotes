@@ -1,0 +1,20 @@
+#img{
+    width: 1500px;
+    height: 400px;
+    background-image: linear-gradient(#081829,purple);
+    padding-top: 9%;
+}
+#img>h4{
+    padding-top: 2%;
+}
+#img2>h5,#img>h5{
+    text-align: left;
+    padding-top: 6%;
+}
+#img2{
+    padding-top: 6%;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+    
+
+
