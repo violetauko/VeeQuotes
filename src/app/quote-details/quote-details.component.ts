@@ -9,6 +9,12 @@ import { Quote } from '../quote';
 export class QuoteDetailsComponent implements OnInit {
 
 @Input() quote!: Quote
+@Output() canDelete = new EventEmitter<boolean>();
+
+quoteDelete(readquote:boolean){
+  this.canDelete.emit(readquote);
+}
+
 
   constructor() { }
 

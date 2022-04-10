@@ -2,11 +2,15 @@
     width: 30%;
     height: 30vh;
     padding: 20px;
-    margin-top: 2%;
+    margin-top: 4%;
     
 }
-#delete{
-    display: flex;
-    justify-content: right;
-    
+#tUp{
+    color: green;
+
+}
+#tDown{
+    color: red;
+    padding-left: 6%;
+    padding-right: 10%;
 }

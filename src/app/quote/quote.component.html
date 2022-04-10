@@ -6,8 +6,15 @@
       <br>
       <br>
       {{quote.author}}
-      <button id="delete"type="button" class="btn btn-danger">delete</button>
+      <br>
+      <br>
+      <i class='fas fa-thumbs-up' id="tUp">{{quote.upvotes}}</i>
+    <i class='fas fa-thumbs-down' id="tDown">{{quote.downvotes}}</i>
+      <app-quote-details (canDelete)="quoteDelete($event,i)">
+        
+      </app-quote-details>
     </div>
+      
 </div>
 
        
