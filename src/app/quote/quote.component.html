@@ -1,13 +1,22 @@
-<div class="container d-flex justify-content-evenly">
-  <div
+<div class="container d-flex justify-content-evenly" >
+  <div 
     *ngFor="let quote of quotes; let i = index"
     class="shadow bg-body rounded"
     id="shadow1"
   >
-    <div appHighlight>
+  <div *ngIf="quote.upvotes==highestVotes && quote.upvotes>0;then highlight else notHighlight"></div>
+  <ng-template #highlight >
+    <div >
+      {{ quote.quote }} <br /><br /><br />{{ quote.author }} <br /><br />
+      <h6 >Did this quote inspire you?</h6>
+    </div>
+  </ng-template >
+  <ng-template #notHighlight>
+    <div >
       {{ quote.quote }} <br /><br /><br />{{ quote.author }} <br /><br />
       <h6>Did this quote inspire you?</h6>
     </div>
+  </ng-template>
  
     <app-quote-details (canDelete)="quoteDelete($event, i)">
     </app-quote-details>

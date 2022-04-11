@@ -14,6 +14,11 @@ export class QuoteComponent implements OnInit {
     new Quote(3, "Progress is impossible without change, and those who cannot change their minds cannot change anything.", "George Bernard Shaw",0,0),
   ]
 
+  arr: number[]=this.quotes.map(quote=>quote.upvotes)
+  highestVotes=Math.max(...this.arr)
+    
+  
+
   quoteDelete(canDelete:boolean, index:number){
     if (canDelete) {
       let toDelete = confirm(`Do you really want to delete this quote?`)

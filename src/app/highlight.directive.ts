@@ -6,18 +6,10 @@ import { Directive, ElementRef,HostListener } from '@angular/core';
 export class HighlightDirective {
 
 
-   constructor(private elem:ElementRef){}
+   constructor(private elem:ElementRef){
+     this.elem.nativeElement.style.color="purple"
 
-  @HostListener("click") onClicks(){
-    this.color("purple")
+   }
   }
 
-  @HostListener("dblclick") onDoubleClicks(){
-    this.color("white")
-  }
-
-  private color(action:string){
-    this.elem.nativeElement.style.color=action;
-
-  }
-}
+ 
