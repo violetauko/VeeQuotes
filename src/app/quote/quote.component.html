@@ -1,10 +1,10 @@
-<div class="container d-flex justify-content-evenly" >
+<div  class="container d-flex justify-content-evenly" >
   <div 
     *ngFor="let quote of quotes; let i = index"
     class="shadow bg-body rounded"
     id="shadow1"
   >
-  <div *ngIf="ishighestVotes && quote.upvotes>0;then highlight else notHighlight"></div>
+  <div *ngIf="ishighestVotes==quote.upvotes && quote.upvotes>0;then highlight else notHighlight"></div>
   <ng-template #highlight >
     <div >
       {{ quote.quote }} <br /><br /><br />{{ quote.author }} <br /><br />
@@ -12,7 +12,7 @@
     </div>
   </ng-template >
   <ng-template #notHighlight>
-    <div >
+    <div appHighlight >
       {{ quote.quote }} <br /><br /><br />{{ quote.author }} <br /><br />
       <h6>Did this quote inspire you?</h6>
     </div>
@@ -24,5 +24,5 @@
   </div>
 </div>
 <div class="container">
-<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+<!-- <app-quote-form (addQuote)="addNewQuote($event)""></app-quote-form> -->
 </div>

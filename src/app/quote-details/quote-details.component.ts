@@ -10,21 +10,21 @@ export class QuoteDetailsComponent implements OnInit {
 
 @Input() quote!: Quote
 @Output() canDelete = new EventEmitter<boolean>();
+  upvotes: number=0;
+  downvotes: number=0;
+
+
+upvote(){
+  this.upvotes++
+}
+downvote(){
+  this.downvotes++
+}
 
 quoteDelete(readquote:boolean){
   this.canDelete.emit(readquote);
 }
-
-
-
-  upvotes=0
-  downvotes=0
-  upvote(){
-    this.upvotes++
-  }
-  downvote(){
-    this.downvotes++
-  }
+  
   constructor() { }
 
   ngOnInit(): void {
