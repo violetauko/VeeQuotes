@@ -15,7 +15,8 @@ export class QuoteComponent implements OnInit {
   ]
 
   arr: number[]=this.quotes.map(quote=>quote.upvotes)
-  highestVotes=Math.max(...this.arr)
+  ishighestVotes=Math.max(...this.arr)
+  quote: any;
     
   
 
@@ -27,6 +28,12 @@ export class QuoteComponent implements OnInit {
         this.quotes.splice(index,1)
       }
     }
+  }
+  addNewQuote(quote:any){
+    let quoteLength = this.quote.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
   }
   
   constructor() { }
