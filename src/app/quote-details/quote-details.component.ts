@@ -15,7 +15,14 @@ quoteDelete(readquote:boolean){
   this.canDelete.emit(readquote);
 }
 
-
+upvotes=0
+  downvotes=0
+  upvote(){
+    this.upvotes++
+  }
+  downvote(){
+    this.downvotes++
+  }
   constructor() { }
 
   ngOnInit(): void {

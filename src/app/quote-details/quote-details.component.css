@@ -1,4 +1,21 @@
 
 #delete{
+    padding-left: 5%;
+    background-color: crimson;
+    border-radius: 50%;
+    color: white;
+
+}
+#tUp{
+   
+    cursor: pointer;
+    padding-right: 6%;
     padding-left: 6%;
+
+}
+#tDown{
+   
+    padding-left: 6%;
+    padding-right: 10%;
+    cursor: pointer;
 }

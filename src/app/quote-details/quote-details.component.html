@@ -1,2 +1,6 @@
-<button (click)="quoteDelete(true)" id="delete"type="button" class="btn btn-danger">delete</button>
+ <div >
+<i (click)="upvote()" id="tUp"class="fas fa-thumbs-up"> {{upvotes}}</i>
+<i (click)="downvote()" id="tDown"class="fas fa-thumbs-down">{{downvotes}}</i>
+ </div>
 
+ <button (click)="quoteDelete(true)" id="delete">delete</button>

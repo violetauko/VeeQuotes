@@ -1,16 +1,8 @@
 #shadow1{
     width: 30%;
-    height: 30vh;
+    height: 35vh;
     padding: 20px;
     margin-top: 4%;
     
 }
-#tUp{
-    color: green;
 
-}
-#tDown{
-    color: red;
-    padding-left: 6%;
-    padding-right: 10%;
-}
