@@ -9,12 +9,14 @@
     <div >
       {{ quote.quote }} <br /><br /><br />{{ quote.author }} <br /><br />
       <h6 >Did this quote inspire you?</h6>
+      posted: {{quote.postDate|date|dateCount}} days ago
     </div>
   </ng-template >
   <ng-template #notHighlight>
-    <div appHighlight >
+    <div  >
       {{ quote.quote }} <br /><br /><br />{{ quote.author }} <br /><br />
       <h6>Did this quote inspire you?</h6>
+      posted: {{quote.postDate|date|dateCount}} days ago
     </div>
   </ng-template>
  
