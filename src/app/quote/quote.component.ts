@@ -7,6 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+ 
 
   quotes:Quote[]=[
     new Quote(1, "I hated every minute of training, but I said, 'Don't quit. Suffer now andlive the rest of your life as a champion.'","Muhammed Ali",0,0,new Date(2022,4,12)),
@@ -16,9 +17,6 @@ export class QuoteComponent implements OnInit {
 
   arr: number[]=this.quotes.map(quote=>quote.upvotes)
   ishighestVotes=Math.max(...this.arr)
-  quote: any;
-    
-  
 
   quoteDelete(canDelete:boolean, index:number){
     if (canDelete) {
@@ -30,9 +28,9 @@ export class QuoteComponent implements OnInit {
     }
   }
   addNewQuote(quote:any){
-    let quoteLength = this.quote.length;
+    let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-    quote.completeDate = new Date(quote.completeDate)
+    quote.postDate = new Date(quote.postDate)
     this.quotes.push(quote)
   }
   
