@@ -1,7 +1,7 @@
 #img{
     width: 1500px;
     height: 400px;
-    background-image: linear-gradient(#081829,purple, #dc143c);
+    background-image: linear-gradient(crimson,purple, #081829);
     padding-top: 9%;
 }
 #img>h4{

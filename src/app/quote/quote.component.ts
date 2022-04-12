@@ -10,9 +10,9 @@ export class QuoteComponent implements OnInit {
  
 
   quotes:Quote[]=[
-    new Quote(1, "I hated every minute of training, but I said, 'Don't quit. Suffer now andlive the rest of your life as a champion.'","Muhammed Ali",0,0,new Date(2022,4,12)),
-    new Quote(2, "When we are no longer able to change a situation - we are challenged to change ourselves."," Viktor E. Frankl",0,0,new Date(2022,4,12)),
-    new Quote(3, "Progress is impossible without change, and those who cannot change their minds cannot change anything.", "George Bernard Shaw",0, 0, new Date(2022,4,12))
+    new Quote(1, "I hated every minute of training, but I said, 'Don't quit. Suffer now andlive the rest of your life as a champion.'","Muhammed Ali",0,0,new Date(),"Ellah"),
+    new Quote(2, "When we are no longer able to change a situation - we are challenged to change ourselves."," Viktor E. Frankl",0,0,new Date(),"Joe"),
+    new Quote(3, "Progress is impossible without change, and those who cannot change their minds cannot change anything.", "George Bernard Shaw",0, 0, new Date(),"Vee")
   ]
 
   arr: number[]=this.quotes.map(quote=>quote.upvotes)
