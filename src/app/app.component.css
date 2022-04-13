@@ -1,20 +1,20 @@
 #img{
     width: 1500px;
     height: 400px;
-    background-image: linear-gradient(crimson,purple, #081829);
+    background-image: url("../assets/pexels-james-wheeler-1486974.jpg");
     padding-top: 9%;
 }
 #img>h4{
     padding-top: 2%;
 }
-#img2>h5,#img>h5{
+#img>h5{
     text-align: left;
-    padding-top: 6%;
+    /* padding-top: 3%; */
 }
-#img2{
-    padding-top: 6%;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+h1{
+    font-size: 4em;
 }
+
     
 
 

@@ -1,9 +1,10 @@
 
 #delete{
-    padding-left: 5%;
+    
     background-color: crimson;
-    border-radius: 50%;
+    border-radius: 40px;
     color: white;
+    width: 10%;
 
 }
 #tUp{
