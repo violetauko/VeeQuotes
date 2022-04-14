@@ -1,9 +1,10 @@
 
-<div class="container" id="quote">
+<div class="container " id="quote">
       <h3>Get your daily wheel here</h3>
   <div 
+  
   *ngFor="let quote of quotes; let i = index"
-  class="shadow bg-body rounded"
+  class="shadow bg-body rounded "
   id="shadow1"
 >
 <div *ngIf="ishighestVotes()===quote.upvotes && quote.upvotes>0;then highlight else notHighlight">
@@ -18,7 +19,7 @@
 </ng-template >
 <ng-template #notHighlight>
   <div  appHighlight>
-    {{ quote.quote }} <br /><br /><br />-{{ quote.author }} <br /><br />
+    {{ quote.quote }} <br >-{{ quote.author }} <br /><br />
     <h6>Did this quote inspire you?</h6>
   </div>
 </ng-template>
@@ -30,8 +31,8 @@
   submitted by:{{quote.name}}
 </div>
 </div>
-<div class="container ">
 <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
+
+
  
 
