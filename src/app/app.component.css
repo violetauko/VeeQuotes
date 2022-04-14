@@ -1,4 +1,4 @@
-#img{
+/* #img{
     width: 1500px;
     height: 400px;
     background-image: url("../assets/pexels-james-wheeler-1486974.jpg");
@@ -10,11 +10,11 @@
 #img>h5{
     text-align: left;
     /* padding-top: 3%; */
-}
+/* }
 h1{
     font-size: 4em;
 }
-h6{}
+h6{} */ 
 
     
 
