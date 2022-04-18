@@ -16,8 +16,11 @@ export class QuoteComponent implements OnInit {
   ]
 
 
-  quoteDelete(canDelete:boolean, index:number){
-    if (canDelete) {
+  addVotes(index:number){
+    this.quotes[index].upvotes++;
+  }
+  quoteDelete(index:number){
+    if (this.quotes.length > index) {
       let toDelete = confirm(`Do you really want to delete this quote?`)
 
       if (toDelete){
@@ -34,21 +37,21 @@ export class QuoteComponent implements OnInit {
 
   ishighestVotes() {
         
-    let quotesUpvote = []
-    let highestUpVote: number
+    let highestupvote: number
+    let quoteWithHighest= this.quotes[0]
+
     for (let count = 0; count < this.quotes.length; count++) {
-      quotesUpvote.push(this.quotes[count].upvotes)
+      if (this.quotes[count].upvotes > quoteWithHighest.upvotes ) {
+        quoteWithHighest = this.quotes[count];
+      }
     }
 
-    quotesUpvote.sort(function (a, b) {
-      return b - a
-    })
-    highestUpVote = quotesUpvote[0]
-    return highestUpVote;
+    highestupvote = quoteWithHighest.upvotes
+    return highestupvote;
   }
   
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 

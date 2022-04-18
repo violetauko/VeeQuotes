@@ -8,21 +8,23 @@ import { Quote } from '../quote';
 })
 export class QuoteDetailsComponent implements OnInit {
 
-@Input() quote!: Quote
-@Output() canDelete = new EventEmitter<boolean>();
-  upvotes: number=0;
+
+  @Input()
+  quote!: Quote;
+  @Output() canDelete = new EventEmitter<number>();
+  @Output() addVotes = new EventEmitter<number>();
   downvotes: number=0;
 
 
-upvote(){
-  this.upvotes++
+upvote(id:number){
+  this.addVotes.emit(id);
 }
 downvote(){
   this.downvotes++
 }
 
-quoteDelete(readquote:boolean){
-  this.canDelete.emit(readquote);
+quoteDelete(id:number){
+  this.canDelete.emit(id);
 }
   
   constructor() { }
